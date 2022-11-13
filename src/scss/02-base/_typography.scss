@@ -1,1 +1,43 @@
-@use "./../01-abstracts/" as *;
+@use "./../01-abstracts/" as a;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+body {
+  color: a.$dark-brown;
+  font-family: "DM Sans", sans-serif;
+  font-size: a.rem(16px);
+  font-weight: 400;
+}
+
+@mixin heading-xl {
+  font-weight: 700;
+  font-size: a.rem(48px);
+  line-height: a.rem(62px);
+}
+
+@mixin heading-l {
+  font-weight: 700;
+  font-size: a.rem(24px);
+  line-height: a.rem(31px);
+  @include a.breakpoint(a.$md) {
+    font-size: a.rem(32px);
+    line-height: a.rem(42px);
+  }
+}
+
+@mixin body-bold {
+  font-weight: 700;
+  font-size: a.rem(18px);
+  line-height: a.rem(23px);
+}
+
+@mixin body {
+  font-weight: 400;
+  font-size: a.rem(18px);
+  line-height: a.rem(23px);
+}
+
+@mixin mini-caption {
+  font-weight: 400;
+  font-size: a.rem(15px);
+  line-height: a.rem(20px);
+}

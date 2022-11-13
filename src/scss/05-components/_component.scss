@@ -1,1 +1,8 @@
-@use "./../01-abstracts/" as *;
+@use "./../01-abstracts/" as a;
+@use "./../02-base/typography" as b;
+
+.component {
+  &__title {
+    @include b.heading-l;
+  }
+}
