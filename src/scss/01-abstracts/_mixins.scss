@@ -3,3 +3,8 @@
     @content;
   }
 }
+
+@mixin max {
+  max-width: 540px;
+  margin: auto;
+}

@@ -10,10 +10,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include a.max;
+    margin-bottom: 16px;
   }
 
   &__logo {
     max-width: 60px;
+  }
+
+  &__balance {
+    margin-bottom: 4px;
+    @include t.mini-caption;
+
+    @include a.breakpoint(a.$md) {
+      @include t.body;
+    }
+
+    &-num {
+      font-size: a.rem(24px);
+      line-height: a.rem(31px);
+      font-weight: 700;
+      @include a.breakpoint(a.$md) {
+        @include t.heading-l;
+      }
+    }
+  }
+
+  &__main {
+    padding: 24px 20px;
+    background-color: a.$card-white;
+    border-radius: 10px;
+    @include a.max;
   }
 
   &__title {
