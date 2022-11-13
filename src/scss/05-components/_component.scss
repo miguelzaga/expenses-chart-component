@@ -1,8 +1,22 @@
 @use "./../01-abstracts/" as a;
-@use "./../02-base/typography" as b;
+@use "./../02-base/typography" as t;
 
 .component {
+  &__header {
+    background-color: a.$red;
+    border-radius: 10px;
+    color: white;
+    padding: 20px 24px 22px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 60px;
+  }
+
   &__title {
-    @include b.heading-l;
+    @include t.heading-l;
   }
 }

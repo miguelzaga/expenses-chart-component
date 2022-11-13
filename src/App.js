@@ -1,13 +1,15 @@
-import { useState } from "react";
+import logo from "/src/images/logo.svg";
 
 function App() {
   return (
     <div className="wrapper">
       <main className="component">
         <header className="component__header">
-          <h2 className="component__balance">My balance</h2>
-          <b className="component__balance-num">$921.48</b>
-          <img className="component__logo" src="" alt="logo" />
+          <div>
+            <h2 className="component__balance">My balance</h2>
+            <b className="component__balance-num">$921.48</b>
+          </div>
+          <img className="component__logo" src={logo} alt="logo" />
         </header>
         <div className="component__main">
           <h1 className="component__title">Spending - Last 7 days</h1>
