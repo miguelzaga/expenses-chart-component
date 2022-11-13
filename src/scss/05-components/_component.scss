@@ -45,5 +45,62 @@
 
   &__title {
     @include t.heading-l;
+    margin-bottom: 52px;
+  }
+
+  /* Temporary */
+  &__graph {
+    width: 100%;
+    height: 177px;
+    margin-bottom: 24px;
+    background-color: a.$cream-bg;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    @include t.mini-caption;
+
+    @include a.breakpoint(a.$md) {
+      @include t.body;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      flex-basis: 100%;
+      height: 2px;
+      border-radius: 1px;
+      background-color: a.$cream-bg;
+      margin-bottom: 24px;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: right;
+    }
+  }
+
+  &__total,
+  &__last {
+    color: a.$medium-brown;
+
+    &-num {
+      font-weight: bold;
+    }
+  }
+
+  &__total {
+    margin-bottom: 4px;
+
+    &-num {
+      font-size: a.rem(30px);
+      line-height: a.rem(39px);
+      @include a.breakpoint(a.$md) {
+        @include t.heading-xl;
+      }
+    }
   }
 }

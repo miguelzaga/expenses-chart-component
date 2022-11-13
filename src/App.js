@@ -20,8 +20,8 @@ function App() {
               <b className="component__total-num">$478.33</b>
             </div>
             <div className="component__bottom-right">
-              <p className="component__last">+2.4%</p>
-              <h3 className="component__last-num">from last month</h3>
+              <h3 className="component__last">from last month</h3>
+              <p className="component__last-num">+2.4%</p>
             </div>
           </div>
         </div>
