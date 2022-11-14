@@ -12,10 +12,16 @@
     align-items: center;
     @include a.max;
     margin-bottom: 16px;
+    @include a.breakpoint(a.$md) {
+      padding: 27px 39px 25px 32px;
+    }
   }
 
   &__logo {
     max-width: 60px;
+    @include a.breakpoint(a.$md) {
+      max-width: 72px;
+    }
   }
 
   &__balance {
@@ -24,6 +30,7 @@
 
     @include a.breakpoint(a.$md) {
       @include t.body;
+      margin-bottom: 8px;
     }
 
     &-num {
@@ -41,11 +48,19 @@
     background-color: a.$card-white;
     border-radius: 10px;
     @include a.max;
+
+    @include a.breakpoint(a.$md) {
+      padding: 32px 40px 40px;
+    }
   }
 
   &__title {
     @include t.heading-l;
     margin-bottom: 52px;
+
+    @include a.breakpoint(a.$md) {
+      margin-bottom: 66px;
+    }
   }
 
   /* Temporary */
@@ -54,6 +69,10 @@
     height: 177px;
     margin-bottom: 24px;
     background-color: a.$cream-bg;
+
+    @include a.breakpoint(a.$md) {
+      margin-bottom: 32px;
+    }
   }
 
   &__bottom {
@@ -74,6 +93,10 @@
       border-radius: 1px;
       background-color: a.$cream-bg;
       margin-bottom: 24px;
+
+      @include a.breakpoint(a.$md) {
+        margin-bottom: 32px;
+      }
     }
 
     &-right {
