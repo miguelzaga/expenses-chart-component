@@ -19,11 +19,11 @@ function App() {
           </div>
           <div className="component__bottom">
             <div className="component__bottom-left">
-              <h3 className="component__total">Total this month</h3>
+              <h2 className="component__total">Total this month</h2>
               <b className="component__total-num">$478.33</b>
             </div>
             <div className="component__bottom-right">
-              <h3 className="component__last">from last month</h3>
+              <h2 className="component__last">from last month</h2>
               <p className="component__last-num">+2.4%</p>
             </div>
           </div>
