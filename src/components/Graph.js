@@ -1,5 +1,8 @@
 import data from "/src/data/data.json";
 
+let today = new Date();
+let weekday = (today.getDay() + 6) % 7;
+
 (function addPercentageToData(data) {
   var maxAmount = data.reduce(function getMaxAmount(maxSoFar, { amount }) {
     if (amount > maxSoFar) {
@@ -22,9 +25,15 @@ function Graph() {
           <div key={day + i} className="graph__cell">
             <div className="graph__bar">
               <div
-                className="graph__bar-fill"
+                className={`graph__bar-fill ${
+                  weekday == i ? "graph__bar-fill--highlighted" : ""
+                }`}
                 style={{ height: day.percentage }}
               ></div>
+              <div
+                className="graph__bar-amount"
+                style={{ bottom: day.percentage }}
+              >{`$${day.amount}`}</div>
             </div>
             <p className="graph__name">{day.day}</p>
           </div>

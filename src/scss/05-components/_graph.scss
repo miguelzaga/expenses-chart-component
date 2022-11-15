@@ -20,12 +20,43 @@
   &__bar {
     flex-basis: 100%;
     display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    &-amount {
+      display: none;
+      position: absolute;
+      background-color: a.$dark-brown;
+      color: a.$card-white;
+      @include t.body-bold;
+      border-radius: 5px;
+      padding: 8px;
+      margin-bottom: 8px;
+      z-index: 1;
+    }
 
     &-fill {
       background-color: a.$red;
       border-radius: 3px;
       width: 100%;
-      margin-top: auto;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ff9b86;
+
+        & + .graph__bar-amount {
+          display: block;
+        }
+      }
+
+      &--highlighted {
+        background-color: a.$cyan;
+
+        &:hover {
+          background-color: #b4e0e5;
+        }
+      }
     }
   }
 
