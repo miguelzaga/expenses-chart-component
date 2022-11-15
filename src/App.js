@@ -1,4 +1,5 @@
 import logo from "/src/images/logo.svg";
+import Graph from "/src/components/Graph.js";
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
         </header>
         <div className="component__main">
           <h1 className="component__title">Spending - Last 7 days</h1>
-          <div className="component__graph">mon tue wed thu fri sat sun</div>
+          <div className="component__graph">
+            <Graph />
+          </div>
           <div className="component__bottom">
             <div className="component__bottom-left">
               <h3 className="component__total">Total this month</h3>
